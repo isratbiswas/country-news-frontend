@@ -43,7 +43,9 @@ const AllCountry = () => {
   console.log(news);
   return (
     <div className="container mx-auto">
-      <h2 className="text-center mb-4 font-bold">Top Headlines</h2>
+      <h2 className="text-center mb-4 font-bold mt-10 text-2xl">
+        Top Headlines
+      </h2>
       <div className="grid lg:grid-cols-3 sm:grid-cols-1 gap-4">
         {news.map((article, index) => (
           <div key={index}>
@@ -69,7 +71,9 @@ const AllCountry = () => {
               <CardFooter className="gap-4">
                 <p>PublishedDate : {article.publishedAt}</p>
                 <Button className="bg-[#0C7779]">
-                  <Link href={`article.url`}>Details</Link>
+                  <a href={`article.url`} target="_blank">
+                    Read Full news{" "}
+                  </a>
                 </Button>
               </CardFooter>
             </Card>
